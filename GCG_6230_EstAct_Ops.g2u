@@ -1,0 +1,1468 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.fEstActDash..Create(BaseForm)
+Gui.fEstActDash..Caption("Est Vs. Actual Dashboard")
+Gui.fEstActDash..Size(23265,10935)
+Gui.fEstActDash..MinX(0)
+Gui.fEstActDash..MinY(0)
+Gui.fEstActDash..Position(0,0)
+Gui.fEstActDash..BackColor(-2147483633)
+Gui.fEstActDash..MousePointer(0)
+Gui.fEstActDash..Event(UnLoad,fEstActDash_UnLoad)
+Gui.fEstActDash..AlwaysOnTop(False)
+Gui.fEstActDash..FontName("Tahoma")
+Gui.fEstActDash..FontSize(8.25)
+Gui.fEstActDash..ControlBox(True)
+Gui.fEstActDash..MaxButton(True)
+Gui.fEstActDash..MinButton(True)
+Gui.fEstActDash..Moveable(True)
+Gui.fEstActDash..Sizeable(True)
+Gui.fEstActDash..ShowInTaskBar(True)
+Gui.fEstActDash..TitleBar(True)
+Gui.fEstActDash.GsGcEstAct.Create(GsGridControl)
+Gui.fEstActDash.GsGcEstAct.Size(22980,9435)
+Gui.fEstActDash.GsGcEstAct.Position(15,870)
+Gui.fEstActDash.GsGcEstAct.Event(RowCellClick,GsGcEstAct_RowCellClick)
+Gui.fEstActDash.GsGcEstAct.Anchor(15)
+Gui.fEstActDash.GsGcEstAct.Enabled(True)
+Gui.fEstActDash.GsGcEstAct.Visible(True)
+Gui.fEstActDash.GsGcEstAct.Zorder(0)
+Gui.fEstActDash.cmdRefresh.Create(Button)
+Gui.fEstActDash.cmdRefresh.Size(555,510)
+Gui.fEstActDash.cmdRefresh.Position(13725,255)
+Gui.fEstActDash.cmdRefresh.Caption("REFRESH")
+Gui.fEstActDash.cmdRefresh.Event(Click,cmdRefresh_Click)
+Gui.fEstActDash.cmdRefresh.Enabled(True)
+Gui.fEstActDash.cmdRefresh.Visible(True)
+Gui.fEstActDash.cmdRefresh.Zorder(0)
+Gui.fEstActDash.cmdRefresh.FontName("Tahoma")
+Gui.fEstActDash.cmdRefresh.FontSize(8.25)
+Gui.fEstActDash.frameJobSelect.Create(Frame)
+Gui.fEstActDash.frameJobSelect.Size(5865,675)
+Gui.fEstActDash.frameJobSelect.Position(75,105)
+Gui.fEstActDash.frameJobSelect.Caption("Select Option")
+Gui.fEstActDash.frameJobSelect.FontStyle(True,False,False,False,False)
+Gui.fEstActDash.frameJobSelect.Enabled(True)
+Gui.fEstActDash.frameJobSelect.Visible(True)
+Gui.fEstActDash.frameJobSelect.Zorder(0)
+Gui.fEstActDash.frameJobSelect.FontName("Tahoma")
+Gui.fEstActDash.frameJobSelect.FontSize(8.25)
+Gui.fEstActDash.optOpenJobs.Create(Option)
+Gui.fEstActDash.optOpenJobs.Size(1185,255)
+Gui.fEstActDash.optOpenJobs.Position(1455,270)
+Gui.fEstActDash.optOpenJobs.Parent("frameJobSelect")
+Gui.fEstActDash.optOpenJobs.Caption("Open Jobs")
+Gui.fEstActDash.optOpenJobs.Event(Click,optOpenJobs_Click)
+Gui.fEstActDash.optOpenJobs.Enabled(True)
+Gui.fEstActDash.optOpenJobs.Visible(True)
+Gui.fEstActDash.optOpenJobs.Zorder(0)
+Gui.fEstActDash.optOpenJobs.FontName("Tahoma")
+Gui.fEstActDash.optOpenJobs.FontSize(8.25)
+Gui.fEstActDash.optClosedJobs.Create(Option)
+Gui.fEstActDash.optClosedJobs.Size(1260,255)
+Gui.fEstActDash.optClosedJobs.Position(105,270)
+Gui.fEstActDash.optClosedJobs.Parent("frameJobSelect")
+Gui.fEstActDash.optClosedJobs.Caption("Closed Jobs")
+Gui.fEstActDash.optClosedJobs.Event(Click,optClosedJobs_Click)
+Gui.fEstActDash.optClosedJobs.Enabled(True)
+Gui.fEstActDash.optClosedJobs.Visible(True)
+Gui.fEstActDash.optClosedJobs.Zorder(0)
+Gui.fEstActDash.optClosedJobs.FontName("Tahoma")
+Gui.fEstActDash.optClosedJobs.FontSize(8.25)
+Gui.fEstActDash.optallJobs.Create(Option)
+Gui.fEstActDash.optallJobs.Size(990,255)
+Gui.fEstActDash.optallJobs.Position(2700,270)
+Gui.fEstActDash.optallJobs.Parent("frameJobSelect")
+Gui.fEstActDash.optallJobs.Caption("All Jobs")
+Gui.fEstActDash.optallJobs.Event(Click,optallJobs_Click)
+Gui.fEstActDash.optallJobs.Enabled(True)
+Gui.fEstActDash.optallJobs.Visible(True)
+Gui.fEstActDash.optallJobs.Zorder(0)
+Gui.fEstActDash.optallJobs.FontName("Tahoma")
+Gui.fEstActDash.optallJobs.FontSize(8.25)
+Gui.fEstActDash.sld99Seq.Create(Slider)
+Gui.fEstActDash.sld99Seq.Enabled(True)
+Gui.fEstActDash.sld99Seq.Visible(True)
+Gui.fEstActDash.sld99Seq.Zorder(0)
+Gui.fEstActDash.sld99Seq.Size(1095,375)
+Gui.fEstActDash.sld99Seq.Position(4485,270)
+Gui.fEstActDash.sld99Seq.Max(1)
+Gui.fEstActDash.sld99Seq.Parent("frameJobSelect")
+Gui.fEstActDash.sld99Seq.Value(1)
+Gui.fEstActDash.lbl4.Create(Label,"99 Seqs:",True,630,195,0,3750,300,True,0,"Tahoma",8.25,,0,0)
+Gui.fEstActDash.lbl4.BorderStyle(0)
+Gui.fEstActDash.lbl4.Parent("frameJobSelect")
+Gui.fEstActDash.lbl5.Create(Label,"Off",True,255,195,0,4500,90,True,0,"Tahoma",8.25,,0,0)
+Gui.fEstActDash.lbl5.BorderStyle(0)
+Gui.fEstActDash.lbl5.Parent("frameJobSelect")
+Gui.fEstActDash.lbl6.Create(Label,"On",True,210,195,0,5340,90,True,0,"Tahoma",8.25,,0,0)
+Gui.fEstActDash.lbl6.BorderStyle(0)
+Gui.fEstActDash.lbl6.Parent("frameJobSelect")
+Gui.fEstActDash.dtpCutOff.Create(DatePicker)
+Gui.fEstActDash.dtpCutOff.Size(1935,285)
+Gui.fEstActDash.dtpCutOff.Position(9675,360)
+Gui.fEstActDash.dtpCutOff.Enabled(True)
+Gui.fEstActDash.dtpCutOff.Visible(True)
+Gui.fEstActDash.dtpCutOff.Zorder(0)
+Gui.fEstActDash.dtpCutOff.CheckBox(False)
+Gui.fEstActDash.dtpCutOff.FontName("Tahoma")
+Gui.fEstActDash.dtpCutOff.FontSize(8.25)
+Gui.fEstActDash.lblDatePicker.Create(Label,"Closed Date Range:",True,1590,210,0,6105,120,True,0,"Arial",8,-2147483633,0,0)
+Gui.fEstActDash.lblDatePicker.FontStyle(True,False,False,False,False)
+Gui.fEstActDash.lblDatePicker.BorderStyle(0)
+Gui.fEstActDash.lblDatePicker.Event(DblClick,lblDatePicker_DblClick)
+Gui.fEstActDash.chkHistory.Create(CheckBox)
+Gui.fEstActDash.chkHistory.Size(1590,300)
+Gui.fEstActDash.chkHistory.Position(11925,360)
+Gui.fEstActDash.chkHistory.Caption("Include History")
+Gui.fEstActDash.chkHistory.Event(Click,chkHistory_Click)
+Gui.fEstActDash.chkHistory.Enabled(True)
+Gui.fEstActDash.chkHistory.Visible(True)
+Gui.fEstActDash.chkHistory.Zorder(0)
+Gui.fEstActDash.chkHistory.FontName("Tahoma")
+Gui.fEstActDash.chkHistory.FontSize(8.25)
+Gui.fEstActDash.dtpFrom.Create(DatePicker)
+Gui.fEstActDash.dtpFrom.Size(1935,285)
+Gui.fEstActDash.dtpFrom.Position(6930,360)
+Gui.fEstActDash.dtpFrom.Enabled(True)
+Gui.fEstActDash.dtpFrom.Visible(True)
+Gui.fEstActDash.dtpFrom.Zorder(0)
+Gui.fEstActDash.dtpFrom.CheckBox(False)
+Gui.fEstActDash.dtpFrom.FontName("Tahoma")
+Gui.fEstActDash.dtpFrom.FontSize(8.25)
+Gui.fEstActDash.lblFrom.Create(Label,"From:",True,405,210,0,6105,405,True,0,"Arial",8,-2147483633,0,0)
+Gui.fEstActDash.lblFrom.BorderStyle(0)
+Gui.fEstActDash.lblTo.Create(Label,"To:",True,225,210,0,8925,405,True,0,"Arial",8,-2147483633,0,0)
+Gui.fEstActDash.lblTo.BorderStyle(0)
+Gui.fEstActDash.cmdExportToXl.Create(Button)
+Gui.fEstActDash.cmdExportToXl.Size(1080,510)
+Gui.fEstActDash.cmdExportToXl.Position(14370,255)
+Gui.fEstActDash.cmdExportToXl.Caption("Export")
+Gui.fEstActDash.cmdExportToXl.Event(Click,cmdExportToXL_Click)
+Gui.fEstActDash.cmdExportToXl.FontSize(10)
+Gui.fEstActDash.cmdExportToXl.Enabled(True)
+Gui.fEstActDash.cmdExportToXl.Visible(True)
+Gui.fEstActDash.cmdExportToXl.Zorder(0)
+Gui.fEstActDash.cmdExportToXl.FontName("Tahoma")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.bLoadData.Declare
+v.Global.sReset.Declare
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Bryan Pham, 05/22/2020
+'Added/ Changed:
+'1. Serialize and Deserialize.
+'2. Context menu to reset columns.
+'3. Allow form resizing
+'4. Abbreviation on column titles.
+
+v.Local.sBegDate.Declare
+
+
+gui.fEstActDash.optClosedJobs.Value(1)
+
+F.Intrinsic.Control.CallSub(SetContextMenus)
+
+gui.fEstActDash.chkHistory.Enabled(True)
+
+'f.Intrinsic.Date.Year(v.Ambient.date,v.Local.sBegDate)
+'f.Intrinsic.String.Build("1/1/{0}",v.Local.sBegDate,v.Local.sBegDate)
+'gui.fEstActDash.dtpFrom.Value(v.Local.sBegDate)
+
+F.Intrinsic.Control.CallSub(EmptyDataTable)
+
+F.Intrinsic.Control.CallSub(FormatGrid)
+F.Intrinsic.Control.CallSub(FormatChild)
+
+F.Intrinsic.Control.CallSub(Deserialize)
+
+gui.fEstActDash..Show
+
+Program.Sub.Main.End
+
+Program.Sub.cmdRefresh_Click.Start
+gui.fEstActDash..Enabled(False)
+gui.fEstActDash.GsGcEstAct.SuspendLayout
+
+F.Intrinsic.Control.CallSub(Serialize)
+
+f.Intrinsic.Control.If(v.DataTable.JobHdLMOT.Exists)
+	f.Data.DataView.Close("JobHdLMOT","JobHdLMOTVw")
+	f.Data.DataTable.Close("JobHdLMOT")
+f.Intrinsic.Control.EndIf
+
+
+
+f.Intrinsic.Control.If(v.DataTable.JobHdLMOT$dtJobOp.Exists)
+	f.Data.DataView.Close("JobHdLMOT$dtJobOp","ChildVw")
+	f.Data.DataTable.Close("JobHdLMOT$dtJobOp")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.CallSub(LoadData)
+
+f.Intrinsic.Control.CallSub(LoadChild)
+
+gui.fEstActDash.GsGcEstAct.SuspendLayout()
+f.Intrinsic.Control.CallSub(FormatGrid)
+f.Intrinsic.Control.CallSub(FormatChild)
+F.Intrinsic.Control.CallSub(Deserialize)
+gui.fEstActDash.GsGcEstAct.ResumeLayout()
+
+f.Intrinsic.Control.If(v.Screen.fEstActDash!chkHistory.checkedasboolean,=,True,"And",v.Screen.fEstActDash!optClosedJobs.Value,=,True)
+
+	f.Intrinsic.Control.CallSub(LoadHistData)
+
+f.Intrinsic.Control.ElseIf(v.Screen.fEstActDash!chkHistory.checkedasboolean,=,True,"And",v.Screen.fEstActDash!optallJobs.Value,=,True)
+
+	f.Intrinsic.Control.CallSub(LoadHistData)	
+f.Intrinsic.Control.EndIf
+
+gui.fEstActDash.GsGcEstAct.ResumeLayout
+
+gui.fEstActDash..SetFocus
+gui.fEstActDash..Enabled(True)
+Program.Sub.cmdRefresh_Click.End
+
+Program.Sub.fEstActDash_UnLoad.Start
+F.Intrinsic.Control.CallSub(Serialize)
+
+	
+f.Intrinsic.Control.End
+Program.Sub.fEstActDash_UnLoad.End
+
+Program.Sub.LoadData.Start
+v.Local.sSql.Declare
+v.Local.sFilter.Declare
+v.Local.dCutDate.Declare
+v.Local.dFromDate.Declare
+v.Local.dCutDate.Set(v.Screen.fEstActDash!dtpCutOff.value)
+v.Local.dFromDate.Set(v.Screen.fEstActDash!dtpFrom.value)
+f.Intrinsic.UI.InvokeWaitDialog("Loading Data","Est. Vs Act. Dashboard")
+
+f.Intrinsic.UI.ChangeWaitStatus("Loading Header Info",0)
+
+f.Intrinsic.Control.If(v.Screen.fEstActDash!optOpenJobs.Value)
+	f.Intrinsic.String.Build("Select Job,Suffix,job + suffix as JS,Location,Part,Product_line,Description,qty_order,Qty_Completed,Amt_Price_per_Unit as Amt_Sales,Amt_Sales as Sales,Date_due,DATE_CLOSED,customer,RTRIM(' ') as Name_Customer,RTRIM('Y') as FLAG_FILTER from V_JOB_HEADER where Date_closed = '1900-01-01'",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sSql)
+f.Intrinsic.Control.ElseIf(v.Screen.fEstActDash!optClosedJobs.Value)
+	f.Intrinsic.String.Build("Select Job,Suffix,job + suffix as JS,Location,Part,Product_line,Description,qty_order,Qty_Completed,Amt_Price_per_Unit as Amt_Sales,Amt_Sales as Sales,Date_due,DATE_CLOSED,customer,RTRIM(' ') as Name_Customer,RTRIM('Y') as FLAG_FILTER from V_JOB_HEADER where date_closed between '{0}' and '{1}'",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sSql)
+	f.Intrinsic.String.Build("{0} and Date_closed <> '1900-01-01'",v.Local.sSql,v.Local.sSql)
+f.Intrinsic.Control.ElseIf(v.Screen.fEstActDash!optallJobs.Value)
+	f.Intrinsic.String.Build("Select Job,Suffix,job + suffix as JS,Location,Part,Product_line,Description,qty_order,Qty_Completed,Amt_Price_per_Unit as Amt_Sales,Amt_Sales as Sales,Date_due,DATE_CLOSED,customer,RTRIM(' ') as Name_Customer,RTRIM('Y') as FLAG_FILTER from V_JOB_HEADER where date_closed between '{0}' and '{1}'",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sSql)
+	f.Intrinsic.String.Build("{0} or Date_closed = '1900-01-01'",v.Local.sSql,v.Local.sSql)
+f.Intrinsic.Control.EndIf
+f.Intrinsic.String.Build("{0} order by Date_due",v.Local.sSql,v.Local.sSql)
+
+F.Intrinsic.Control.If(V.DataTable.JobHD.Exists)
+	F.Data.DataTable.Close("JobHD")
+F.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.ODBC.conx.exists)
+	f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.OpenCompanyConnection(99999)
+
+f.Data.DataTable.CreateFromSQL("JobHD","Conx",v.Local.sSql,True)
+
+f.Intrinsic.Control.If(v.DataTable.JobHD.RowCount,>,0)
+
+	f.Intrinsic.Control.If(v.Screen.fEstActDash!sld99Seq.Value,=,0)
+		v.Local.sFilter.Set(" and a.SEQ not like '99%'")
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("")
+	f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.UI.ChangeWaitStatus("Loading Customer Info",10)
+
+	f.Data.Dictionary.CreateFromSQL("CustDict","Conx","select Customer,Name_customer from V_CUSTOMER_MASTER")
+	f.Data.Dictionary.SetDefaultReturn("CustDict","")
+
+
+	f.Data.DataTable.FillFromDictionary("JobHD","CustDict","Customer","Name_customer")
+	f.Data.Dictionary.Close("CustDict")
+
+	f.Data.Dictionary.createfromdatatable("HDDict","JobHD","JS","FLAG_FILTER")
+	f.Data.Dictionary.SetDefaultReturn("HDDict","")
+
+	f.Intrinsic.UI.ChangeWaitStatus("Loading Operations data",15)
+	
+	f.Intrinsic.string.Build("Select a.Job,a.Suffix,a.job + a.suffix as JS,a.LMO,Sum(a.Dollars_Estimated) as Dollar_Estimated,sum(a.Dollars_actual) as Dollar_Actual,sum(a.Hours_estimated) as Hours_estimated,sum(a.Hours_Actual) as Hours_Actual,RTRIM(' ') as FLAG_FILTER from V_JOB_Operations a inner join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix where (b.date_closed between '{0}' and '{1}' or b.date_closed = '1900-01-01'){2} group by a.job,a.suffix,JS,a.LMO",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+
+	f.Data.DataTable.CreateFromSQL("JobOpsFull","Conx",v.Local.sSql)
+
+
+	f.Intrinsic.UI.ChangeWaitStatus("Loading Aggregate Data",50)
+	
+	f.Intrinsic.string.Build("Select a.Job,a.Suffix,a.job + a.suffix as JS,Sum(a.Dollars_Estimated) as Dollar_Estimated,sum(a.Dollars_actual) as Dollar_Actual,sum(a.Hours_estimated) as Hours_estimated,sum(a.Hours_Actual) as Hours_Actual,RTRIM(' ') as FLAG_FILTER from V_JOB_Operations a inner join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix where a.LMO <> 'Z' and a.LMO <> 'C' and (b.date_closed between '{0}' and '{1}' or b.date_closed = '1900-01-01'){2} group by a.job,a.suffix,JS",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+
+
+	f.Data.DataTable.CreateFromSQL("JobOpsTot","Conx",v.Local.sSql,true)
+
+	
+	f.Intrinsic.UI.ChangeWaitStatus("Compiling data",75)
+	f.Data.DataTable.AddExpressionColumn("JobOpsTot","PCT_VARIANCE_Dollar","Float","IIF(Dollar_Actual = 0 OR Dollar_Estimated = 0,0,([Dollar_Estimated] - [Dollar_Actual])/[Dollar_Estimated])")
+	
+	f.Data.DataTable.FillFromDictionary("JobOpsTot","HDDict","JS","FLAG_FILTER")
+	
+	f.Data.DataView.Create("JobOpsTot","TempVw",22,"FLAG_FILTER = 'Y'","")
+	f.Data.DataView.ToDataTable("JobOpsTot","TempVw","JobOpsTotal")
+	
+	f.Data.DataView.Close("JobOpsTot","TempVw")
+	f.Data.DataTable.Close("JobOpsTot")
+	
+	f.Data.DataTable.AddExpressionColumn("JobOpsFull","PCT_VARIANCE_Dollar","Float","IIF(Dollar_Actual = 0 OR Dollar_Estimated = 0,0,([Dollar_Estimated] - [Dollar_Actual])/[Dollar_Estimated])")
+	f.Data.DataTable.AddExpressionColumn("JobOpsFull","PCT_VARIANCE_Hours","Float","IIF(Hours_Actual = 0 OR Hours_estimated = 0,0,([Hours_estimated] - [Hours_Actual])/[Hours_estimated])")
+	
+	f.Data.DataTable.FillFromDictionary("JobOpsFull","HDDict","JS","FLAG_FILTER")
+	f.Data.Dictionary.Close("HDDict")
+	
+	f.Data.DataView.Create("JobOpsFull","TempVw",22,"FLAG_FILTER = 'Y'","")
+	f.Data.DataView.ToDataTable("JobOpsFull","TempVw","JobOps")
+	
+	f.Data.DataView.Close("JobOpsFull","TempVw")
+	f.Data.DataTable.Close("JobOpsFull")
+	
+	f.Data.DataView.Create("JobOps","TempVw",22)
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'M'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsM")
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'O'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsO")
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'L'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsL")
+	
+	f.Data.DataView.Close("JobOps","TempVw")
+	f.Data.DataTable.Close("JobOps")
+	
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHD*!*a","DataTable","JobOpsM*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.Location*!*a.Part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*b.Dollar_Estimated as M_Dollar_Est*!*b.Dollar_Actual as M_Dollar_Act*!*b.PCT_VARIANCE_Dollar as M_Dollar_PCT","","","","JobHdM",false)
+	
+	f.Data.DataTable.Close("JobHD")
+	
+	f.Data.DataTable.Close("JobOpsM")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdM*!*a","DataTable","JobOpsO*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.Location*!*a.Part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_Closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*b.Dollar_Estimated as O_Dollar_Est*!*b.Dollar_Actual as O_Dollar_Act*!*b.PCT_VARIANCE_Dollar as O_Dollar_PCT","","","","JobHdMO",false)
+	
+	
+	f.Data.DataTable.Close("JobHdM")
+	
+	f.Data.DataTable.Close("JobOpsO")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdMO*!*a","DataTable","JobOpsL*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.Location*!*a.Part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*a.O_Dollar_Est*!*a.O_Dollar_Act*!*a.O_Dollar_PCT*!*b.Dollar_Estimated as L_Dollar_Est*!*b.Dollar_Actual as L_Dollar_Act*!*b.PCT_VARIANCE_Dollar as L_Dollar_PCT*!*b.Hours_estimated as L_Hours_Est*!*b.Hours_Actual as L_Hours_Act*!*b.PCT_VARIANCE_Hours as L_Hours_PCT","","","","JobHdLMO",False)
+	
+	f.Data.DataTable.Close("JobHdMO")
+	
+	f.Data.DataTable.Close("JobOpsL")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdLMO*!*a","DataTable","JobOpsTotal*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.Location*!*a.Part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_Closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*b.Dollar_Estimated as T_Dollar_Est*!*b.Dollar_actual as T_Dollar_act*!*b.PCT_VARIANCE_Dollar as T_Dollar_PCT*!*a.L_Dollar_Est*!*a.L_Dollar_Act*!*a.L_Dollar_PCT*!*a.L_Hours_Est*!*a.L_Hours_Act*!*a.L_Hours_PCT*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*a.O_Dollar_Est*!*a.O_Dollar_Act*!*a.O_Dollar_PCT","","","","JobHdLMOT",True)
+	f.Intrinsic.UI.ChangeWaitStatus("Finalizing Data load",100)
+	f.Data.DataTable.Close("JobOpsTotal")
+	
+	f.Data.DataTable.Close("JobHdLMO")
+	
+	f.Data.DataTable.AddColumn("JobHdlMOT","X","string")
+	f.Data.DataTable.AddExpressionColumn("JobHdLMOT","T_Difference","FLOAT","T_Dollar_Est - T_Dollar_Act")
+	f.Data.DataTable.AddExpressionColumn("JobHdLMOT","L_Difference","FLOAT","L_Dollar_Est - L_Dollar_Act")
+	f.Data.DataTable.AddExpressionColumn("JobHdLMOT","H_Difference","FLOAT","L_Hours_Est - L_Hours_Act")
+	f.Data.DataTable.AddExpressionColumn("JobHdLMOT","M_Difference","FLOAT","M_Dollar_Est - M_Dollar_Act")
+	f.Data.DataTable.AddExpressionColumn("JobHdLMOT","O_Difference","FLOAT","O_Dollar_Est - O_Dollar_Act")
+
+	f.Data.DataTable.AcceptChanges("JobHdLMOT")
+	
+	f.Data.DataView.Create("JobHdLMOT","JobHdLMOTVw",22,"","Date_due ASC")
+	
+	f.Data.DataTable.AddColumn("JobHdLMOT","FLAG_HIST","String")
+	
+	F.Data.DataTable.AddExpressionColumn("JobHdLMOT","MAT_EST_ADJ","FLOAT","[M_Dollar_Est]/IIF([qty_order] = 0,1,[qty_order])*IIF([Qty_Completed] = 0,1,[Qty_Completed])")
+	F.Data.DataTable.AddExpressionColumn("JobHdLMOT","MAT_DIFF_ADJ","FLOAT","[MAT_EST_ADJ]-[M_Dollar_Act]")
+	
+F.Intrinsic.Control.Else
+
+	f.Data.DataTable.Close("JobHD")
+	f.Intrinsic.Control.CallSub(EmptyDataTable)
+
+f.Intrinsic.Control.EndIf
+
+gui.fEstActDash.GsGcEstAct.SuspendLayout()
+
+
+
+'f.Intrinsic.Control.If(v.DataTable.JobHdLMOT.RowCount,>,0)
+
+
+	
+'f.Intrinsic.Control.EndIf
+
+gui.fEstActDash.GsGcEstAct.ResumeLayout()
+
+F.ODBC.Connection!conx.Close
+
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+Program.Sub.LoadData.End
+
+Program.Sub.LoadChild.Start
+v.Local.sSql.Declare
+v.Local.sFilter.Declare
+v.Local.dCutDate.Declare
+v.Local.dFromDate.Declare
+v.Local.dCutDate.Set(v.Screen.fEstActDash!dtpCutOff.value)
+v.Local.dFromDate.Set(v.Screen.fEstActDash!dtpFrom.value)
+
+f.Intrinsic.Control.If(v.Screen.fEstActDash!sld99Seq.Value,=,0)
+	v.Local.sFilter.Set(" and a.SEQ not like '99%'")
+f.Intrinsic.Control.Else
+	v.Local.sFilter.Set("")
+f.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.Part,a.DESCRIPTION, RTRIM('') as PL, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_Operations a left join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix Where b.DATE_CLOSED between '{0}' and '{1}'{2}",V.Local.dFromDate.PervasiveDate,V.Local.dCutDate.PervasiveDate,v.Local.sFilter,V.Local.sSql)
+
+f.Intrinsic.Control.If(v.Screen.fEstActDash!optOpenJobs.Value)
+	f.Intrinsic.String.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.Part,a.DESCRIPTION, RTRIM('') as PL, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_Operations a left join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix where b.Date_closed = '1900-01-01'{2}",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+f.Intrinsic.Control.ElseIf(v.Screen.fEstActDash!optClosedJobs.Value)
+	f.Intrinsic.String.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.Part,a.DESCRIPTION, RTRIM('') as PL, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_Operations a left join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix Where b.date_closed between '{0}' and '{1}'{2}",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+	f.Intrinsic.String.Build("{0} and b.Date_closed <> '1900-01-01'",v.Local.sSql,v.Local.sSql)
+f.Intrinsic.Control.ElseIf(v.Screen.fEstActDash!optallJobs.Value)
+	f.Intrinsic.String.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.Part,a.DESCRIPTION, RTRIM('') as PL, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_Operations a left join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix Where b.date_closed between '{0}' and '{1}'{2}",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+	f.Intrinsic.String.Build("{0} or b.Date_closed = '1900-01-01'",v.Local.sSql,v.Local.sSql)
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.String.Build("{0} order by a.Job,a.Suffix,a.SEQ",v.Local.sSql,v.Local.sSql)
+
+f.Intrinsic.Control.If(v.ODBC.conx.exists)
+	f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.OpenCompanyConnection(99999)
+F.Data.DataTable.CreateFromSQL("JobHdLMOT$dtJobOp","Conx",V.Local.sSql,True)
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT$dtJobOp","JSS","string","Job+Suffix+Seq")
+'f.Data.DataTable.AddColumn("JobHdLMOT$dtJobOp","NOTES","string")
+
+F.Data.Dictionary.CreateFromSQL("dictPL","Conx","Select PART,PRODUCT_LINE as PL from V_INVENTORY_MSTR")
+F.Data.Dictionary.SetDefaultReturn("dictPL","")
+
+'f.Data.Dictionary.CreateFromSQL("NOTES","Conx","Select concat(JOB+SUFFIX,SEQ), rtrim(NOTES) from GCG_6497_WO_NOTES")
+'f.Data.Dictionary.SetDefaultReturn("NOTES","")
+
+F.ODBC.Connection!conx.Close
+
+F.Data.DataTable.FillFromDictionary("JobHdLMOT$dtJobOp","dictPL","PART","PL")
+F.Data.Dictionary.Close("dictPL")
+
+'f.Data.DataTable.FillFromDictionary("JobHdLMOT$dtJobOp","NOTES","JSS","NOTES")
+'f.Data.Dictionary.Close("NOTES")
+
+f.Data.DataTable.RemoveColumn("JobHdLMOT$dtJobOp","JSS")
+
+f.Data.DataView.Create("JobHdLMOT$dtJobOp","ChildVw")
+F.Data.DataTable.AddRelation("JobHdLMOT","JS","JobHdLMOT$dtJobOp","JS")
+
+
+Program.Sub.LoadChild.End
+
+
+
+Program.Sub.FormatGrid.Start
+V.Global.bLoadData.Set(True)
+v.Local.i.Declare
+v.Local.i.Set("0")
+gui.fEstActDash.GsGcEstAct.SuspendLayout
+gui.fEstActDash.GsGcEstAct.AddGridviewFromDataview("JobsGrid","JobHdLMOT","JobHdLMOTVw")
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","FLAG_HIST","Visible", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","Visible", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Date_due","Visible", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","JS","Visible", False)
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","VisibleIndex",0)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","caption","+")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","MinWidth",25)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","MaxWidth",25)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","HeaderHAlignment","center")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","X","CellHAlignment","center")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","Cellforecolor","DodgerBlue")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","caption","Job")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Job","MinWidth", 50)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","Cellforecolor","DodgerBlue")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","caption","Suf.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Suffix","MinWidth", 35)
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","caption","Loc")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Location","MinWidth", 35)
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","caption","Part")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Part","MinWidth", 80)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","caption","PL")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Product_Line","MinWidth", 35)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","caption","Description")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Description","MinWidth", 120)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","caption","Cust. ID")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","readonly", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","allowedit", false)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Customer","MinWidth", 40)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","caption","Cust. Name")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Name_customer","MinWidth", 80)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","caption","Ord. Qty")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","MinWidth", 50)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","EditMask","#########")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","qty_order","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","caption","Act. Qty")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","MinWidth", 50)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","EditMask","#########")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Qty_Completed","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","caption","Unit Price")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","MinWidth", 50)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Amt_Sales","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","caption","Sales$")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","Sales","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","caption","Date Due")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","MinWidth", 65)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_due","DisplayCustomDatetime", "d")
+
+
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","headerForeColor",v.Color.PRI-GSS-00)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","HeaderFontBold",True)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","caption","Date Closed")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","ReadOnly",True)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","allowedit",false)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","MinWidth",65)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","date_closed","DisplayCustomDatetime","d")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","caption","Total Est.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Est","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","caption","Total Act.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_Act","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","caption","Total Diff.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Difference","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","T_Difference","Tneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","T_Difference","Tneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","caption","Total % Var.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","EditMask","##0.00%")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","T_Dollar_PCT","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","T_Dollar_PCT","TDneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","T_Dollar_PCT","TDneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","caption","Labor Est.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Est","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","caption","Labor Act.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_Act","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","caption","Labor Diff.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Difference","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","L_Difference","Lneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","L_Difference","Lneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","caption","Labor % Var.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","MinWidth", 70)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","EditMaskType","numeric")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","EditMask","##0.00%")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Dollar_PCT","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","L_Dollar_PCT","LDneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","L_Dollar_PCT","LDneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","caption","Labor Est Hrs")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","EditMask","#########.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Est","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","caption","Labor Act Hrs")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","EditMask","#########.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_Act","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","caption","Hours Diff.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","EditMask","#####0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","H_Difference","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","H_Difference","Hneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","H_Difference","Hneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","caption","Hours % Var.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","EditMask","##0.00%")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","L_Hours_PCT","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","L_Hours_PCT","LHneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","L_Hours_PCT","LHneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","caption","Mat. Est.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Est","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","caption","Mat. Act.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_Act","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","caption","Mat. Diff.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Difference","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","M_Difference","Mneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","M_Difference","Mneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","caption","Mat. % Var.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","MinWidth", 70)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","EditMaskType","numeric")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","EditMask","##0.00%")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","M_Dollar_PCT","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","M_Dollar_PCT","MDneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","M_Dollar_PCT","MDneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","caption","Outside. Est.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Est","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","caption","Outside Act.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_Act","EditMaskAsDisplayFormat",true)
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","caption","Outside Diff.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Difference","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","O_Difference","Oneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","O_Difference","Oneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","caption","Outside % Var.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","MinWidth", 70)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","EditMaskType","numeric")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","EditMask","##0.00%")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","O_Dollar_PCT","EditMaskAsDisplayFormat",true)
+
+gui.fEstActDash.GsGcEstAct.AddStyleFormatCondition("JobsGrid","O_Dollar_PCT","ODneg","LESS",0)
+GUI.fEstActDash.GsGcEstAct.SetStyleFormatConditionProperty("JobsGrid","O_Dollar_PCT","ODneg","ForeColor","Crimson")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","caption","Mat Est Adj for Act Qty")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_EST_ADJ","EditMaskAsDisplayFormat",true)
+
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","headerforecolor", v.Color.PRI-GSS-00)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","headerfontbold", true)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","caption","Mat Diff Adj for Act Qty")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","readonly", True)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","allowedit", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","MinWidth", 70)
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","EditMaskType","numeric")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","EditMask","$########0.00")
+Gui.fEstActDash.GsGcEstAct.SetColumnProperty("JobsGrid","MAT_DIFF_ADJ","EditMaskAsDisplayFormat",true)
+
+
+
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","T_Dollar_Est","Total Estimate","Sum","Tot. Est: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","T_Dollar_act","Total Actual","Sum","Tot. Act: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","T_Difference","Grand Total","Sum","Tot. Dif:","","C2")
+
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","L_Dollar_Est","Total Lab Estimate","Sum","Lab. Est: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","L_Dollar_act","Total Lab Actual","Sum","Lab. Act: ","","C")
+GUI.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","L_Difference","Total Labor","Sum","Tot. Dif:","","C2")
+
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","L_Hours_Est","Total Lab Estimate","Sum","Hrs. Est: "," Hrs","")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","L_Hours_act","Total Lab Actual","Sum","Hrs. Act: "," Hrs","")
+GUI.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","H_Difference","Total Hours","Sum","Tot. Dif:","","N2")
+
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","M_Dollar_Est","Total Mat Estimate","Sum","Mat. Est: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","M_Dollar_act","Total Mat Actual","Sum","Mat. Act: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","M_Difference","Total Material","Sum","Tot. Dif:","","C2")
+
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","O_Dollar_Est","Total Out Estimate","Sum","Out. Est: ","","C")
+gui.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","O_Dollar_act","Total Out Actual","Sum","Out. Act: ","","C")
+GUI.fEstActDash.GsGcEstAct.AddSummaryItem("JobsGrid","O_Difference","Total Outside","Sum","Tot. Dif:","","C2")
+
+gui.fEstActDash.GsGcEstAct.SetGridviewProperty("JobsGrid","OptionsFindAlwaysVisible",True)
+gui.fEstActDash.GsGcEstAct.SetGridviewProperty("JobsGrid","Showgrouppanel",True)
+gui.fEstActDash.GsGcEstAct.SetGridviewProperty("JobsGrid","OptionsViewColumnAutoWidth",True)
+
+gui.fEstActDash.GsGcEstAct.SetGridviewProperty("JobsGrid","OptionsViewShowAutoFilterRow",False)
+
+gui.fEstActDash.GsGcEstAct.MainView("JobsGrid")
+
+gui.fEstActDash.GsGcEstAct.ResumeLayout
+Program.Sub.FormatGrid.End
+
+Program.Sub.FormatChild.Start
+v.Local.i.Declare
+v.Local.i.Set("0")
+gui.fEstActDash.GsGcEstAct.SuspendLayout
+gui.fEstActDash.GsGcEstAct.AddGridviewFromDataview("ChildGrid","JobHdlMOT","ChildVw")
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","JS","Visible", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","JOB","Visible", False)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SUFFIX","Visible", False)
+
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","Caption","")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","HeaderHAlignment","CENTER")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","CellHAlignment","RIGHT")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","MinWidth",)
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","MaxWidth",)
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","DisplayCustomNumeric","$###,##0.00")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","ReadOnly","TRUE")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","AllowEdit","FALSE")
+'gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","","VisibleIndex",v.Local.i)
+'f.Intrinsic.Math.Add(v.local.i,1,v.Local.i)
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","Caption","SEQ")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","CellHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","MinWidth",65)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","MaxWidth",65)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","SEQ","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","Caption","Part/WC")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","HeaderHAlignment","LEFT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","CellHAlignment","LEFT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","MinWidth",100)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","MaxWidth",125)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PART","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","Caption","DESCRIPTION")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","HeaderHAlignment","LEFT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","CellHAlignment","LEFT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","MinWidth",125)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","MaxWidth",200)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DESCRIPTION","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","Caption","PL")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","CellHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","MinWidth",35)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","MaxWidth",35)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","PL","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","Caption","LMO")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","CellHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","MinWidth",35)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","MaxWidth",35)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","LMO","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","Caption","$ EST.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","CellHAlignment","RIGHT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","MinWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","MaxWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","DisplayCustomNumeric","$###,##0.00")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ESTIMATED","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","Caption","$ ACT.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","CellHAlignment","RIGHT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","MinWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","MaxWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","DisplayCustomNumeric","$###,##0.00")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","DOLLAR_ACTUAL","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","Caption","QTY EST.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","CellHAlignment","RIGHT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","MinWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","MaxWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","DisplayCustomNumeric","###,##0.00")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ESTIMATED","AllowEdit","FALSE")
+
+
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","Caption","QTY ACT.")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","HeaderHAlignment","CENTER")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","CellHAlignment","RIGHT")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","MinWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","MaxWidth",80)
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","DisplayCustomNumeric","###,##0.00")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","ReadOnly","TRUE")
+gui.fEstActDash.GsGcEstAct.SetColumnProperty("ChildGrid","HOURS_ACTUAL","AllowEdit","FALSE")
+
+gui.fEstActDash.GsGcEstAct.ResumeLayout
+Program.Sub.FormatChild.End
+
+Program.Sub.LoadHistData.Start
+v.Local.sSql.Declare
+v.Local.sFilter.Declare
+v.Local.dCutDate.Declare
+v.Local.dFromDate.Declare
+v.Local.dCutDate.Set(v.Screen.fEstActDash!dtpCutOff.value)
+v.Local.dFromDate.Set(v.Screen.fEstActDash!dtpFrom.value)
+
+
+f.Intrinsic.UI.InvokeWaitDialog("Loading Historical Data","Est. Vs Act. Dashboard")
+'script was pulling in total sales$ which is wront, we need the unit price populated
+'changed to paull AMT_PRICE_PER_UNIT as AMT_SALES to make the quick change - SFF 031419
+f.Intrinsic.String.Build("Select Job,Suffix,job + suffix as JS,Location,Part,Product_line,Description,Date_due,date_Closed,qty_order,Qty_Completed,Amt_Price_Per_Unit as Amt_Sales,Amt_Sales as Sales,customer,RTRIM(' ') as Name_Customer,RTRIM('Y') as FLAG_FILTER from V_JOB_HIST_MAST where date_closed between '{0}' and '{1}'",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sSql)
+
+f.Intrinsic.String.Build("{0} order by Date_due",v.Local.sSql,v.Local.sSql)
+
+f.Intrinsic.Control.If(v.ODBC.coredb.exists)
+	f.ODBC.Connection!coredb.Close
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!coredb.opencompanyconnection(99999)
+f.Data.DataTable.CreateFromSQL("JobHD","coredb",v.Local.sSql,True)
+
+f.Intrinsic.Control.If(v.DataTable.JobHD.RowCount,>,0)
+
+	f.Intrinsic.Control.If(v.Screen.fEstActDash!sld99Seq.Value,=,0)
+		v.Local.sFilter.Set(" and a.SEQ not like '99%'")
+	f.Intrinsic.Control.Else
+		v.Local.sFilter.Set("")
+	f.Intrinsic.Control.EndIf
+
+	f.Data.Dictionary.CreateFromSQL("CustDict","coredb","select Customer,Name_customer from V_CUSTOMER_MASTER")
+	f.Data.Dictionary.SetDefaultReturn("CustDict","")
+
+	
+	f.Data.DataTable.FillFromDictionary("JobHD","CustDict","Customer","Name_customer")
+	f.Data.Dictionary.Close("CustDict")
+	
+	f.Intrinsic.string.Build("Select a.Job,a.Suffix,a.job + a.suffix as JS,a.LMO,Sum(a.Dollars_Estimated) as Dollar_Estimated,sum(a.Dollars_actual) as Dollar_Actual,sum(a.Hours_estimated) as Hours_estimated,sum(a.Hours_Actual) as Hours_Actual,a.LMO,RTRIM(' ') as FLAG_FILTER from V_JOB_HIST_OPS a inner join V_JOB_HIST_MAST b on a.job = b.job and a.suffix = b.suffix where b.date_closed between '{0}' and '{1}'{2} group by a.job,a.suffix,JS,a.LMO ",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+
+	f.Data.DataTable.CreateFromSQL("JobOpsFull","coredb",v.Local.sSql)
+	
+	f.Intrinsic.string.Build("Select a.Job,a.Suffix,a.job + a.suffix as JS,Sum(a.Dollars_Estimated) as Dollar_Estimated,sum(a.Dollars_actual) as Dollar_Actual,sum(a.Hours_estimated) as Hours_estimated,sum(a.Hours_Actual) as Hours_Actual,RTRIM(' ') as FLAG_FILTER from V_JOB_HIST_OPS a inner join V_JOB_HIST_MAST b on a.job = b.job and a.suffix = b.suffix where a.LMO <> 'Z' and a.LMO <> 'C' and b.date_closed between '{0}' and '{1}'{2} group by a.job,a.suffix,JS",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+
+	f.Data.DataTable.CreateFromSQL("JobOpsTotal","coredb",v.Local.sSql)
+	
+	f.Intrinsic.string.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.DESCRIPTION, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_HIST_OPS a left join V_JOB_HIST_MAST b on a.job = b.job and a.suffix = b.suffix  where a.LMO <> 'Z' and a.LMO <> 'C' and b.date_closed between '{0}' and '{1}'{2} order by a.SEQ",v.Local.dFromDate.PervasiveDate,v.Local.dCutDate.PervasiveDate,v.Local.sFilter,v.Local.sSql)
+
+	f.Data.DataTable.CreateFromSQL("JobOpsChildH","coredb",v.Local.sSql,True)
+
+	f.Data.DataTable.AddExpressionColumn("JobOpsTotal","PCT_VARIANCE_Dollar","Float","IIF(Dollar_Actual = 0 OR Dollar_Estimated = 0,0,([Dollar_Estimated] - [Dollar_Actual])/[Dollar_Estimated])")
+	f.Data.DataTable.AddExpressionColumn("JobOpsFull","PCT_VARIANCE_Dollar","Float","IIF(Dollar_Actual = 0 OR Dollar_Estimated = 0,0,([Dollar_Estimated] - [Dollar_Actual])/[Dollar_Estimated])")
+	f.Data.DataTable.AddExpressionColumn("JobOpsFull","PCT_VARIANCE_Hours","Float","IIF(Hours_Actual = 0 OR Hours_estimated = 0,0,([Hours_estimated] - [Hours_Actual])/[Hours_estimated])")
+	
+	f.Data.DataView.Create("JobOpsFull","TempVw",22)
+	f.Data.DataView.ToDataTable("JobOpsFull","TempVw","JobOps")
+	
+	f.Data.DataView.Close("JobOpsFull","TempVw")
+	f.Data.DataTable.Close("JobOpsFull")
+	
+	f.Data.DataView.Create("JobOps","TempVw",22)
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'M'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsM")
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'O'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsO")
+	
+	f.Data.DataView.SetFilter("JobOps","TempVw","LMO = 'L'")
+	f.Data.DataView.ToDataTable("JobOps","TempVw","JobOpsL")
+	
+	f.Data.DataView.Close("JobOps","TempVw")
+	f.Data.DataTable.Close("JobOps")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHD*!*a","DataTable","JobOpsM*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*b.Dollar_Estimated as M_Dollar_Est*!*b.Dollar_Actual as M_Dollar_Act*!*b.PCT_VARIANCE_Dollar as M_Dollar_PCT","","","","JobHdM",false)
+	
+	f.Data.DataTable.Close("JobHD")
+	
+	f.Data.DataTable.Close("JobOpsM")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdM*!*a","DataTable","JobOpsO*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*b.Dollar_Estimated as O_Dollar_Est*!*b.Dollar_Actual as O_Dollar_Act*!*b.PCT_VARIANCE_Dollar as O_Dollar_PCT","","","","JobHdMO",false)
+	
+	f.Data.DataTable.Close("JobHdM")
+	
+	f.Data.DataTable.Close("JobOpsO")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdMO*!*a","DataTable","JobOpsL*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*a.O_Dollar_Est*!*a.O_Dollar_Act*!*a.O_Dollar_PCT*!*b.Dollar_Estimated as L_Dollar_Est*!*b.Dollar_Actual as L_Dollar_Act*!*b.PCT_VARIANCE_Dollar as L_Dollar_PCT*!*b.Hours_estimated as L_Hours_Est*!*b.Hours_Actual as L_Hours_Act*!*b.PCT_VARIANCE_Hours as L_Hours_PCT","","","","JobHdLMOH",false)
+	
+	f.Data.DataTable.Close("JobHdMO")
+	
+	f.Data.DataTable.Close("JobOpsL")
+	
+	f.Data.Linq.Join("LeftJoin","DataTable","JobHdLMOH*!*a","DataTable","JobOpsTotal*!*b","a.job=b.job AND a.suffix = b.suffix","a.job*!*a.suffix*!*a.JS*!*a.Part*!*a.Product_line*!*a.description*!*a.date_due*!*a.date_closed*!*a.Customer*!*a.Name_customer*!*a.qty_order*!*a.Qty_Completed*!*a.Amt_Sales*!*a.Sales*!*a.M_Dollar_Est*!*a.M_Dollar_Act*!*a.M_Dollar_PCT*!*a.O_Dollar_Est*!*a.O_Dollar_Act*!*a.O_Dollar_PCT*!*a.L_Dollar_Est*!*a.L_Dollar_Act*!*a.L_Dollar_PCT*!*a.L_Hours_Est*!*a.L_Hours_Act*!*a.L_Hours_PCT*!*b.Dollar_Estimated as T_Dollar_Est*!*b.Dollar_actual as T_Dollar_act*!*b.PCT_VARIANCE_Dollar as T_Dollar_PCT","","","","JobHdLMOTH",True)
+	
+	f.Data.DataTable.AddColumn("JobHdLMOTH","FLAG_HIST","String")
+	
+	f.Data.DataTable.SetValue("JobHdLMOTH",-1,"FLAG_HIST","H")
+	
+	
+	f.Data.DataTable.Merge("JobHdLMOTH","JobHdLMOT",True,2)
+	f.Data.DataTable.Merge("JobOpsChildH","JobHdLMOT$dtJobOp",True,2)
+	
+	f.Data.DataTable.Close("JobHdLMOTH")
+	f.Data.DataTable.Close("JobOpsChildH")
+
+f.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!coredb.close
+
+f.Intrinsic.UI.CloseWaitDialog
+
+f.Intrinsic.Control.ExitSub
+
+Program.Sub.LoadHistData.End
+
+Program.Sub.GsGcEstAct_RowCellClick.Start
+v.Local.sParams.Declare
+
+
+f.Intrinsic.Control.If(V.Args.column,=,"JOB","OR",V.Args.column,=,"SUFFIX")
+	gui.fEstActDash..Enabled(false)
+	f.Intrinsic.Control.If(v.DataTable.JobHdLMOT(v.Args.rowindex).FLAG_HIST!fieldValTrim,=,"H")
+		F.Intrinsic.String.Build("7!*!{0}!*!{1}!*!A",v.DataTable.JobHdLMOT(v.Args.rowindex).Job!fieldValTrim,v.DataTable.JobHdLMOT(v.Args.rowindex).Suffix!fieldValTrim,V.Local.sParams)
+	f.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("7!*!{0}!*!{1}!*!A",v.DataTable.JobHdLMOT(v.Args.rowindex).Job!fieldValTrim,v.DataTable.JobHdLMOT(v.Args.rowindex).Suffix!fieldValTrim,V.Local.sParams)
+    	
+	f.Intrinsic.Control.EndIf
+	F.Global.General.CallWrapperSync(450000,V.Local.sParams)
+    gui.fEstActDash..Enabled(True)
+    
+f.Intrinsic.Control.EndIf
+gui.fEstActDash..SetFocus
+
+Program.Sub.GsGcEstAct_RowCellClick.End
+
+Program.Sub.chkHistory_Click.Start
+v.Local.sRET.Declare
+
+f.Intrinsic.Control.If(v.Screen.fEstActDash!optOpenJobs.Value,<>,True)
+
+	f.Intrinsic.UI.Msgbox("Changes have been made to the Include History Option.  Do you want to refresh data?","INCLUDE HISTORY OPTION CHANGED",4,v.Local.sRET)
+	
+	f.Intrinsic.Control.If(v.Local.sRET,=,"6")
+		f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.EndIf
+Program.Sub.chkHistory_Click.End
+
+Program.Sub.EmptyDataTable.Start
+v.Local.sSql.Declare
+f.Intrinsic.Control.If(v.DataTable.JobHdLMOT.Exists,=,true)
+	f.Data.DataView.Close("JobHdLMOT","JobHdLMOTVw")
+	f.Data.DataTable.Close("JobHdLMOT")
+f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.If(v.DataTable.JobHdLMOT$dtJobOp.Exists)
+	f.Data.DataView.Close("JobHdLMOT$dtJobOp","ChildVw")
+	f.Data.DataTable.Close("JobHdLMOT$dtJobOp")
+f.Intrinsic.Control.EndIf
+
+'f.Data.DataTable.Create("JobHdLMOT",True)
+
+'f.Data.DataTable.addColumn("JobHdLMOT","job","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","Suffix","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","JS","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","Part","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","Product_line","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","description","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","date_due","Date")
+'f.Data.DataTable.AddColumn("JobHdlMOT","date_closed","Date")
+'f.Data.DataTable.addColumn("JobHdLMOT","Customer","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","Name_Customer","String")
+'f.Data.DataTable.addColumn("JobHdLMOT","qty_order","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","Qty_Completed","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","Amt_Sales","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","Sales","Float")
+
+'f.Data.DataTable.addColumn("JobHdLMOT","T_Dollar_Est","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","T_Dollar_act","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","T_Dollar_PCT","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","T_Difference","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Dollar_Est","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Dollar_Act","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Dollar_PCT","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Difference","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Hours_Est","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Hours_Act","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","L_Hours_PCT","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","H_Difference","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","M_Dollar_Est","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","M_Dollar_Act","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","M_Dollar_PCT","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","M_Difference","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","O_Dollar_Est","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","O_Dollar_Act","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","O_Dollar_PCT","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT","O_Difference","Float")
+
+'f.Data.DataTable.addColumn("JobHdLMOT","X","String")
+
+'f.Data.DataTable.AddColumn("JobHdLMOT","FLAG_HIST","String")
+'f.Data.DataTable.AddColumn("JobHdLMOT","MAT_EST_ADJ","Float")
+'f.Data.DataTable.AddColumn("JobHdLMOT","MAT_DIFF_ADJ","Float")
+
+'f.Data.DataView.Create("JobHdLMOT","JobHdLMOTVw",22,"","Date_due ASC")
+
+f.Data.DataTable.CreateFromString("JobHdLMOT","","X*!*FLAG_HIST*!*CUSTOMER*!*DATE_DUE*!*JOB*!*SUFFIX*!*JS*!*LOCATION*!*PART*!*PRODUCT_LINE*!*DESCRIPTION*!*NAME_CUSTOMER*!*QTY_ORDER*!*QTY_COMPLETED*!*AMT_SALES*!*SALES*!*DATE_CLOSED*!*T_DOLLAR_EST*!*T_DOLLAR_ACT*!*T_DOLLAR_PCT*!*L_DOLLAR_EST*!*L_DOLLAR_ACT*!*L_DOLLAR_PCT*!*L_HOURS_EST*!*L_HOURS_ACT*!*L_HOURS_PCT*!*M_DOLLAR_EST*!*M_DOLLAR_ACT*!*M_DOLLAR_PCT*!*O_DOLLAR_EST*!*O_DOLLAR_ACT*!*O_DOLLAR_PCT*!*COST","STRING*!*STRING*!*STRING*!*STRING*!*DATE*!*STRING*!*STRING*!*STRING*!*STRING*!*STRING*!*STRING*!*STRING*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*DATE*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT*!*FLOAT","*!*","!*!",TRUE)
+f.Data.DataTable.DeleteRow("JobHdLMOT")
+f.Data.DataTable.AcceptChanges("JobHdLMOT")
+f.Data.DataTable.AddColumn("JobHdLMOT","MAT_EST_ADJ","Float")
+f.Data.DataTable.AddColumn("JobHdLMOT","MAT_DIFF_ADJ","Float")
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT","T_Difference","FLOAT","T_Dollar_Est - T_Dollar_Act")
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT","L_Difference","FLOAT","L_Dollar_Est - L_Dollar_Act")
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT","H_Difference","FLOAT","L_Hours_Est - L_Hours_Act")
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT","M_Difference","FLOAT","M_Dollar_Est - M_Dollar_Act")
+f.Data.DataTable.AddExpressionColumn("JobHdLMOT","O_Difference","FLOAT","O_Dollar_Est - O_Dollar_Act")
+f.Data.DataView.Create("JobHdlMOT","JobHdLMOTVw")
+
+f.Intrinsic.Control.If(v.ODBC.conx.exists)
+	f.ODBC.Connection!conx.Close
+f.Intrinsic.Control.EndIf
+
+f.ODBC.Connection!conx.OpenCompanyConnection(99999)
+F.Intrinsic.String.Build("Select a.Job, a.Suffix, a.job + a.suffix as JS, a.Seq, a.Part,a.DESCRIPTION, RTRIM('') as PL, a.LMO, a.Dollars_Estimated as Dollar_Estimated, a.Dollars_actual as Dollar_Actual, a.Hours_estimated as Hours_estimated, a.Hours_Actual as Hours_Actual From V_JOB_Operations a left join V_JOB_HEADER b on a.job = b.job and a.suffix = b.suffix Where b.DATE_CLOSED > '2999-12-12'","",V.Local.sSql)
+
+F.Data.DataTable.CreateFromSQL("JobHdLMOT$dtJobOp","Conx",V.Local.sSql,True)
+F.ODBC.Connection!conx.Close
+
+f.Data.DataView.Create("JobHdLMOT$dtJobOp","ChildVw")
+'f.Data.DataTable.Create("JobHdLMOT$dtJobOp",True)
+
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","job","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","Suffix","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","JS","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","seq","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","Part","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","description","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","PL","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","LMO","String")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","Dollar_Estimated","Float")
+'f.Data.DataTable.AddColumn("JobHdLMOT$dtJobOp","Dollar_Actual","Float")
+'f.Data.DataTable.addColumn("JobHdLMOT$dtJobOp","Hours_estimated","Float")
+'f.Data.DataTable.AddColumn("JobHdLMOT$dtJobOp","Hours_Actual","Float")
+
+
+F.Data.DataTable.AddRelation("JobHdLMOT","JS","JobHdLMOT$dtJobOp","JS")
+
+Program.Sub.EmptyDataTable.End
+
+Program.Sub.optClosedJobs_Click.Start
+v.Local.sRET.Declare
+
+gui.fEstActDash.chkHistory.Enabled(true)
+gui.fEstActDash.dtpCutOff.Enabled(true)
+gui.fEstActDash.dtpFrom.Enabled(True)
+gui.fEstActDash.lblDatePicker.Enabled(True)
+gui.fEstActDash.lblFrom.Enabled(True)
+gui.fEstActDash.lblTo.Enabled(True)
+
+f.Intrinsic.UI.Msgbox("Changes have been made to the Select Option.  Do you want to refresh data?","SELECT OPTION CHANGED",4,v.Local.sRET)
+
+f.Intrinsic.Control.If(v.Local.sRET,=,"6")
+	f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+f.Intrinsic.Control.EndIf
+Program.Sub.optClosedJobs_Click.End
+
+Program.Sub.optOpenJobs_Click.Start
+v.Local.sRET.Declare
+
+gui.fEstActDash.chkHistory.Enabled(False)
+gui.fEstActDash.dtpCutOff.Enabled(false)
+gui.fEstActDash.dtpFrom.Enabled(false)
+gui.fEstActDash.lblDatePicker.Enabled(false)
+gui.fEstActDash.lblFrom.Enabled(false)
+gui.fEstActDash.lblTo.Enabled(false)
+gui.fEstActDash.chkHistory.Value(0)
+
+f.Intrinsic.UI.Msgbox("Changes have been made to the Select Option.  Do you want to refresh data?","SELECT OPTION CHANGED",4,v.Local.sRET)
+
+f.Intrinsic.Control.If(v.Local.sRET,=,"6")
+	f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+f.Intrinsic.Control.EndIf
+Program.Sub.optOpenJobs_Click.End
+
+Program.Sub.cmdExportToXL_Click.Start
+V.Local.sError.Declare
+V.Local.bExcel.Declare
+V.Local.sFileExport.Declare
+V.Local.bFileLocked.Declare
+V.Local.sMsg.Declare
+V.Local.sFileExtension.Declare
+
+F.Intrinsic.Control.Try
+
+'If Machine has excel, export as xlsx, else .csv
+F.Automation.MSExcel.CheckPresence(V.Local.bExcel)
+
+F.Intrinsic.Control.If(V.Local.bExcel)
+	V.Local.sFileExtension.Set("xlsx")
+	F.Intrinsic.String.Build("{0}\Est_Vs_Act_{1}_{2}.xlsx",V.Caller.LocalGSSTempDir,V.Ambient.Date.PervasiveDate,V.Ambient.Time.PervasiveDate,V.Local.sFileExport)
+F.Intrinsic.Control.Else
+	'V.Local.sFileExtension.Set("csv")
+	'F.Intrinsic.String.Build("{0}\Est_Vs_Act_{1}_{2}.csv",V.Caller.LocalGSSTempDir,V.Ambient.Date.PervasiveDate,V.Ambient.Time.PervasiveDate,V.Local.sFileExport)
+	F.Intrinsic.UI.Msgbox("This export requires Excel to be installed","Error")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+'Check to see if file is locked
+F.Intrinsic.File.IsFileLocked(V.Local.sFileExport,V.Local.bFileLocked)
+F.Intrinsic.Control.If(V.Local.bFileLocked)
+	F.Intrinsic.String.Build("File is already open. Please close and export again. {0}File: {1}",V.Ambient.NewLine,V.Local.sFileExport, V.Local.sMsg)
+	F.Intrinsic.UI.Msgbox(V.Local.sMsg)
+F.Intrinsic.Control.Else
+	Gui.fEstActDash.GsGcEstAct.ExportDetails(V.Local.sFileExtension,V.Local.sFileExport,1)
+	F.Intrinsic.Task.ShellExec(0,"",V.Local.sFileExport,"","",1)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}", V.Ambient.ScriptPath, V.Ambient.Newline, V.Ambient.CurrentSubroutine, V.Ambient.ErrorNumber, V.Ambient.ErrorDescription, V.Ambient.GABVersion, V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdExportToXL_Click.End
+
+Program.Sub.optallJobs_Click.Start
+v.Local.sRET.Declare
+
+gui.fEstActDash.chkHistory.Enabled(true)
+gui.fEstActDash.dtpCutOff.Enabled(true)
+gui.fEstActDash.dtpFrom.Enabled(True)
+gui.fEstActDash.lblDatePicker.Enabled(True)
+gui.fEstActDash.lblFrom.Enabled(True)
+gui.fEstActDash.lblTo.Enabled(True)
+
+f.Intrinsic.UI.Msgbox("Changes have been made to the Select Option.  Do you want to refresh data?","SELECT OPTION CHANGED",4,v.Local.sRET)
+f.Intrinsic.Control.If(v.Local.sRET,=,"6")
+	f.Intrinsic.Control.CallSub(cmdRefresh_Click)
+f.Intrinsic.Control.EndIf
+Program.Sub.optallJobs_Click.End
+
+Program.Sub.Serialize.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+	F.ODBC.Connection!common.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+	F.ODBC.Connection!common.Execute("Delete From Gs_Registry Where Reg_ID = 6230;")
+	F.ODBC.Connection!common.Close
+	'JobsGrid
+	Gui.fEstActDash.GsGcEstAct.Serialize("JobsGrid",V.Local.sSerialize)
+	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"JobsGrid",6230,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	V.Local.sSerialize.Declare
+	
+	'Delete old registry records
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"JobsGrid",6230,0,5,"",V.Local.sSerialize)
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		F.ODBC.Connection!common.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+		F.ODBC.Connection!common.Execute("Delete From Gs_Registry Where Reg_ID = 6230 And Seq < 1000;")
+		F.ODBC.Connection!common.Close
+	F.Intrinsic.Control.EndIf
+
+	F.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"JobsGrid",6230,1000,6,"",V.Local.sSerialize)
+	
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		Gui.fEstActDash.GsGcEstAct.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.Deserialize.End
+
+Program.Sub.SetContextMenus.Start
+F.Intrinsic.Control.Try
+	V.Local.sError.Declare
+	
+	Gui.fEstActDash..ContextMenuCreate("ctxEstAct")
+	Gui.fEstActDash.GsGcEstAct.ContextMenuAttach("ctxEstAct")
+	Gui.fEstActDash..ContextMenuAddItem("ctxEstAct","ResetColumns",0,"Reset Columns")
+	Gui.fEstActDash..ContextMenuSetItemEventHandler("ctxEstAct","ResetColumns","MenuClickResetColumns")
+	
+	F.Intrinsic.Control.Catch
+		F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+		F.Intrinsic.UI.Msgbox(V.Local.sError)
+		F.Intrinsic.Control.End 
+	F.Intrinsic.Control.EndTry
+
+Program.Sub.SetContextMenus.End
+
+Program.Sub.MenuClickResetColumns.Start
+F.Intrinsic.Control.Try
+V.Local.sError.Declare
+
+	f.Intrinsic.Control.CallSub(FormatGrid)
+	
+	F.ODBC.Connection!common.OpenConnection(V.Ambient.Ccon,V.Ambient.Cuser,V.Ambient.Cpass)
+	F.ODBC.Connection!common.Execute("Delete From Gs_Registry Where Reg_ID = 6230;")
+	F.ODBC.Connection!common.Close
+	F.Intrinsic.Control.CallSub(FormatGrid)
+	F.Intrinsic.Control.CallSub(FormatChild)
+'	F.Global.Registry.AddValue(V.Caller.User,V.Caller.CompanyCode,"JobsGrid",6230,1000,False,"Serialize",False,0,-999.0,1/1/1980,12:00:00 AM)
+	f.Intrinsic.Control.CallSub(Serialize)
+			
+
+	V.Global.bLoadData.Set(True)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.String.Build("Project: {0}{1}{1}Subroutine: {2}{1}Error Occurred {3} with description {4}{1}{1}GAB Version: {5}",V.Ambient.ScriptPath,V.Ambient.Newline,V.Ambient.CurrentSubroutine,V.Ambient.ErrorNumber,V.Ambient.ErrorDescription,V.Ambient.GABVersion,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End 
+F.Intrinsic.Control.EndTry
+Program.Sub.MenuClickResetColumns.End
+
+Program.Sub.lblDatePicker_DblClick.Start
+Program.Sub.lblDatePicker_DblClick.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$rcole$}$20231012080940329$}$ZUe18EWXbmRoTBVoeWbrFagM+XZUVh5oPPGihSklTVCUfhqFAWXDZuZiqTCRL9n03UeN0t2ON3I=
+Program.Sub.Comments.End
